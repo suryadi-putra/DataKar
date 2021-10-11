@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataKar", "DataKar\DataKar.csproj", "{03B4DEED-DBF3-48C6-B885-F89771AF9B38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03B4DEED-DBF3-48C6-B885-F89771AF9B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B4DEED-DBF3-48C6-B885-F89771AF9B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B4DEED-DBF3-48C6-B885-F89771AF9B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B4DEED-DBF3-48C6-B885-F89771AF9B38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13A9B7FF-74AE-4208-9CB3-C476D3AC48FB}
+	EndGlobalSection
+EndGlobal

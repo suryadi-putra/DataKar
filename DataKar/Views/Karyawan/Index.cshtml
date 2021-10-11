@@ -1,0 +1,13 @@
+﻿@model IEnumerable<DataKar.Models.Karyawan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center"><i class="fas fa-address-book"></i>Data Karyawan Terbaru</h1>
+
+   
+
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAll", Model)
+</div>

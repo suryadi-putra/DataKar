@@ -1,0 +1,54 @@
+﻿@model IEnumerable<DataKar.Models.Karyawan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alamat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telepon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TLahir)
+            </th>
+            <th>
+                <a onclick="PopupModal('@Url.Action("TambahEdit","Karyawan",null,Context.Request.Scheme)','Tambah Data')" class="btn btn-success text-white"><i class="fas fa-plus-circle"></i> Tambah Data</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nama)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Alamat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telepon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TLahir)
+                </td>
+                <td>
+                    <a onclick="PopupModal('@Url.Action("TambahEdit","Karyawan",new {id=item.ID},Context.Request.Scheme)','Perubahan Data')" class="btn btn-info text-white"><i class="fas fa-pencil-alt"></i> Edit</a>
+                    <form asp-action="Delete" asp-route-id="@item.ID" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
+                        <input type="hidden" asp-for="@item.ID" />
+                        <input type="submit" value="Delete" class="btn btn-danger" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
